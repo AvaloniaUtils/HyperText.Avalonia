@@ -13,7 +13,7 @@
         <vm:MainWindowViewModel />
     </Design.DataContext>
 
-   
+
     <Grid RowDefinitions="Auto,*">
         <ItemsControl x:Name="myItems" Items="{Binding HyperlinkContentProvider}">
             <ItemsControl.ItemsPanel>
@@ -23,7 +23,7 @@
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <controls:Hyperlink Text="{Binding Alias}" Url="{Binding Url}" />
+                    <controls:Hyperlink Alias="{Binding Alias}" Url="{Binding Url}" />
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
 

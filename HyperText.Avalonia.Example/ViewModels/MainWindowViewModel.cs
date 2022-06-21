@@ -8,9 +8,9 @@ namespace HyperText.Avalonia.Example.ViewModels
         public IEnumerable<HyperlinkContent> HyperlinkContentProvider => new[]
         {
             new HyperlinkContent
-                { Alias = "dedede         ", Url = "https://avaloniaui.net/docs/styles/styles" },
-            new HyperlinkContent { Alias = "edvyydebbvydebvyed" },
-            new HyperlinkContent { Url = "https://avaloniaui.net/docs/styles/styles" }
+                { Alias = "dedede         ", Url = "https://docs.avaloniaui.net/docs/styling/styles" },
+            new HyperlinkContent { Alias = "edvyydebbvydebvyed    " },
+            new HyperlinkContent { Url = "https://docs.avaloniaui.net/docs/styling/styles" }
         };
     }
 }

@@ -2,10 +2,10 @@
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:controls="clr-namespace:HyperText.Avalonia.Controls">
-    <Style Selector="controls|Hyperlink">
+    <Style Selector="controls|Hyperlink.hyperlink">
         <Setter Property="Foreground" Value="#3483eb" />
     </Style>
-    <Style Selector="controls|Hyperlink:pointerover">
+    <Style Selector="controls|Hyperlink.hyperlink:pointerover">
         <Setter Property="Cursor" Value="Hand"/>     
         <Setter Property="TextDecorations" Value="Underline"/>
         <Setter Property="Foreground"  Value="#3496eb"/>
