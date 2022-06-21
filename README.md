@@ -23,3 +23,6 @@ Add style in App.xaml
 ```xml
    <avalonia:HyperLinkStyle/>
 ```
+
+---
+Special thanks for ![Tako](https://github.com/Takoooooo)
