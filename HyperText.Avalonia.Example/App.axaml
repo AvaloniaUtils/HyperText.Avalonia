@@ -9,7 +9,6 @@
 
     <Application.Styles>
         <FluentTheme Mode="Light"/>
-    
-      
+        <avalonia:HyperLinkStyle/>
     </Application.Styles>
 </Application>
