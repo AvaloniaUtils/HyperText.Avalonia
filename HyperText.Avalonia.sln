@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperText.Avalonia", "HyperText.Avalonia\HyperText.Avalonia.csproj", "{650FA614-AE11-4493-A209-FF83C0ADA91C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperText.Avalonia.Example", "HyperText.Avalonia.Example\HyperText.Avalonia.Example.csproj", "{78920BF1-F9A2-444E-B007-AE80ED2EC61D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{650FA614-AE11-4493-A209-FF83C0ADA91C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{650FA614-AE11-4493-A209-FF83C0ADA91C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{650FA614-AE11-4493-A209-FF83C0ADA91C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{650FA614-AE11-4493-A209-FF83C0ADA91C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78920BF1-F9A2-444E-B007-AE80ED2EC61D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78920BF1-F9A2-444E-B007-AE80ED2EC61D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78920BF1-F9A2-444E-B007-AE80ED2EC61D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78920BF1-F9A2-444E-B007-AE80ED2EC61D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
