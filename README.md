@@ -5,8 +5,10 @@ Little control for big links
 
 ![](photo.jpg)
 
+>   dotnet add package HyperText.Avalonia 
 
-[![nuget]([https://img.shields.io/badge/1.1-nuget-blue](https://img.shields.io/badge/hypertext-nuget-blue))]([https://www.nuget.org/packages/MessageBox.Avalonia/](https://www.nuget.org/packages/HyperText.Avalonia/)
+
+[![nuget](https://img.shields.io/badge/hypertext-nuget-blue)](https://www.nuget.org/packages/HyperText.Avalonia/) or download this repo.
 
 For using
 
