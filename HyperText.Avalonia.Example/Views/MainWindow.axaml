@@ -15,7 +15,7 @@
 
 
     <Grid RowDefinitions="Auto,*">
-        <ItemsControl x:Name="myItems" Items="{Binding HyperlinkContentProvider}">
+        <ItemsControl Items="{Binding HyperlinkContentProvider}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <StackPanel Orientation="Horizontal" />

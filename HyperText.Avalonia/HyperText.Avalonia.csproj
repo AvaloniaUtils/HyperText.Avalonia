@@ -5,10 +5,12 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>latest</LangVersion>
+        <Version>11-night</Version>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="Avalonia" Version="0.10.15"/>
-        <PackageReference Include="Avalonia.Desktop" Version="0.10.15"/>
+        <PackageReference Include="Avalonia" Version="11.0.0-preview6" />
+        <PackageReference Include="Avalonia.Desktop" Version="11.0.0-preview6" />
     </ItemGroup>
     <ItemGroup>
         <AvaloniaResource Include="**\*.xaml">

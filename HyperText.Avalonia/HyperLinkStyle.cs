@@ -3,7 +3,7 @@ using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using Avalonia.Markup.Xaml.Styling;
 using Avalonia.Styling;
-using Avalonia.Themes.Fluent;
+
 
 namespace HyperText.Avalonia;
 
@@ -55,6 +55,17 @@ public class HyperLinkStyle : AvaloniaObject, IStyle, IResourceProvider
         }
     }
 
+    public bool TryGetResource(object key, ThemeVariant? theme, out object? value)
+    {
+        if (!_isLoading && Loaded is IResourceProvider p)
+        {
+            return p.TryGetResource(key,theme, out value);
+        }
+
+        value = null;
+        return false;
+    }
+
     bool IResourceNode.HasResources => (Loaded as IResourceProvider)?.HasResources ?? false;
     IReadOnlyList<IStyle> IStyle.Children => _loaded?.Children ?? Array.Empty<IStyle>();
 
@@ -76,18 +87,9 @@ public class HyperLinkStyle : AvaloniaObject, IStyle, IResourceProvider
         }
     }
 
-    public SelectorMatchResult TryAttach(IStyleable target, IStyleHost? host) => Loaded.TryAttach(target, host);
 
-    public bool TryGetResource(object key, out object? value)
-    {
-        if (!_isLoading && Loaded is IResourceProvider p)
-        {
-            return p.TryGetResource(key, out value);
-        }
 
-        value = null;
-        return false;
-    }
+
 
     void IResourceProvider.AddOwner(IResourceHost owner) => (Loaded as IResourceProvider)?.AddOwner(owner);
     void IResourceProvider.RemoveOwner(IResourceHost owner) => (Loaded as IResourceProvider)?.RemoveOwner(owner);
