@@ -15,7 +15,7 @@
 
 
     <Grid RowDefinitions="Auto,*">
-        <ItemsControl Items="{Binding HyperlinkContentProvider}">
+        <ItemsControl ItemsSource="{Binding HyperlinkContentProvider}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <StackPanel Orientation="Horizontal" />
@@ -23,7 +23,7 @@
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <controls:Hyperlink Alias="{Binding Alias}" Url="{Binding Url}" />
+                    <controls:Hyperlink Alias="{Binding Alias}" Url="{Binding Url}"  />
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
 

@@ -7,7 +7,7 @@ using Avalonia.Styling;
 
 namespace HyperText.Avalonia;
 
-public class HyperLinkStyle : AvaloniaObject, IStyle, IResourceProvider
+public class HyperLinkStyle : Styles, IResourceProvider, IStyle
 {
     private readonly IStyle _controlsStyles;
     private bool _isLoading;
@@ -65,6 +65,7 @@ public class HyperLinkStyle : AvaloniaObject, IStyle, IResourceProvider
         value = null;
         return false;
     }
+    
 
     bool IResourceNode.HasResources => (Loaded as IResourceProvider)?.HasResources ?? false;
     IReadOnlyList<IStyle> IStyle.Children => _loaded?.Children ?? Array.Empty<IStyle>();
