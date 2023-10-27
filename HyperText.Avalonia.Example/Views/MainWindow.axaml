@@ -14,7 +14,7 @@
     </Design.DataContext>
 
 
-    <Grid RowDefinitions="Auto,*">
+    <Grid RowDefinitions="Auto ,*">
         <ItemsControl ItemsSource="{Binding HyperlinkContentProvider}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
@@ -23,10 +23,14 @@
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <controls:Hyperlink Alias="{Binding Alias}" Url="{Binding Url}"  />
+                    <Border BorderThickness="10" BorderBrush="Black">
+                        <controls:Hyperlink Alias="{Binding Alias}" Url="{Binding Url}"
+                                            Command="{Binding $parent[Window].DataContext.OpenUrl}"
+                                            CommandParameter="{Binding Url}"
+                                            x:CompileBindings="False" />
+                    </Border>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
-
         </ItemsControl>
         <TextBox Grid.Row="1">xcfsdfsd</TextBox>
     </Grid>
