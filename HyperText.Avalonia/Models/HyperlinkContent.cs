@@ -10,6 +10,10 @@
         /// <summary>
         /// Alias what would be clickable if set,else raw url would be displayed (also clickable)
         /// </summary>
-        public string Alias { get; set; }
+        public string Alias
+        {
+            get; 
+            set;
+        }
     }
 }

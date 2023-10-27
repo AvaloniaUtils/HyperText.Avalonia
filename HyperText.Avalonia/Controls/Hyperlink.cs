@@ -1,11 +1,10 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Input;
-using HyperText.Avalonia.Extensions;
+
 
 namespace HyperText.Avalonia.Controls
 {
-    public class Hyperlink : TextBlock
+    public class Hyperlink : Button
     {
         public static readonly DirectProperty<Hyperlink, string> UrlProperty
             = AvaloniaProperty.RegisterDirect<Hyperlink, string>(nameof(Url), o => o.Url, (o, v) => o.Url = v);
@@ -23,9 +22,13 @@ namespace HyperText.Avalonia.Controls
             set
             {
                 SetAndRaise(UrlProperty, ref _url, value);
+                var textBlock = new TextBlock
+                {
+                    Text = _url
+                };
                 if (string.IsNullOrEmpty(_alias))
                 {
-                    Text = _url;
+                    Content =  textBlock;
                 }
                 if (!string.IsNullOrEmpty(_url))
                 {
@@ -37,26 +40,17 @@ namespace HyperText.Avalonia.Controls
 
         public string Alias
         {
-            get => Text;
+            get => string.IsNullOrEmpty(_alias) ? _url : _alias;
             set
             {
                 SetAndRaise(UrlProperty, ref _alias, value);
-                if (string.IsNullOrEmpty(_alias))
+                var textBlock = new TextBlock
                 {
-                    Text = _url;
-                }
-                else
-                {
-                    Text = _alias;
-                }
-            }
-        }
+                    Text = string.IsNullOrEmpty(_alias) ? _url : _alias
+                };
 
-        protected override void OnPointerPressed(PointerPressedEventArgs e)
-        {
-            base.OnPointerPressed(e);
-            if (!string.IsNullOrEmpty(Url))
-                Url.OpenUrl();
+                Content = textBlock;
+            }
         }
     }
 }
